@@ -30,14 +30,16 @@
                     android:layout_marginTop="48dp"
                     android:orientation="horizontal"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:id="@+id/imageView8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        app:srcCompat="@drawable/back" />
+                        app:srcCompat="@drawable/back"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:id="@+id/textView6"
@@ -46,7 +48,8 @@
                         android:layout_marginStart="8dp"
                         android:layout_weight="1"
                         android:text="Back"
-                        android:textColor="@color/darkBrown" />
+                        android:textColor="@color/darkBrown"
+                        tools:ignore="HardcodedText,InefficientWeight" />
                 </LinearLayout>
 
                 <ImageView
@@ -58,7 +61,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                    tools:srcCompat="@tools:sample/backgrounds/scenic"
+                    tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:id="@+id/favBtn"
@@ -68,7 +72,8 @@
                     app:layout_constraintBottom_toBottomOf="@+id/backBtn"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/backBtn"
-                    app:srcCompat="@drawable/btn_3" />
+                    app:srcCompat="@drawable/btn_3"
+                    tools:ignore="ContentDescription" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
@@ -80,7 +85,8 @@
                 android:textAlignment="center"
                 android:textColor="@color/darkBrown"
                 android:textSize="22sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -90,7 +96,8 @@
                 android:text="Coffee Size"
                 android:textColor="@color/darkBrown"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -110,7 +117,8 @@
                     android:gravity="center"
                     android:text="Small"
                     android:textColor="@color/darkBrown"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/mediumBtn"
@@ -120,7 +128,8 @@
                     android:gravity="center"
                     android:text="Medium"
                     android:textColor="@color/darkBrown"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/largeBtn"
@@ -130,7 +139,8 @@
                     android:gravity="center"
                     android:text="Large"
                     android:textColor="@color/darkBrown"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
             </LinearLayout>
 
             <LinearLayout
@@ -147,7 +157,8 @@
                     android:text="Qty."
                     android:textColor="@color/darkBrown"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="90dp"
@@ -166,7 +177,8 @@
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText,TextSizeCheck" />
 
                     <TextView
                         android:id="@+id/numberInCartTxt"
@@ -179,7 +191,8 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/plusBtn"
                         app:layout_constraintStart_toEndOf="@+id/minusBtn"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/plusBtn"
@@ -192,7 +205,8 @@
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText,TextSizeCheck" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
@@ -206,7 +220,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="@color/darkBrown"
                     android:textStyle="bold"
-                    tools:ignore="RtlCompat" />
+                    tools:ignore="HardcodedText,InefficientWeight,RtlCompat" />
 
                 <ImageView
                     android:id="@+id/imageView11"
@@ -214,7 +228,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginEnd="16dp"
-                    app:srcCompat="@drawable/star" />
+                    app:srcCompat="@drawable/star"
+                    tools:ignore="ContentDescription" />
 
             </LinearLayout>
 
@@ -227,7 +242,8 @@
                 android:text="Description"
                 android:textColor="@color/darkBrown"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/descriptionTxt"
@@ -237,7 +253,8 @@
                 android:layout_marginTop="8dp"
                 android:textColor="@color/darkBrown"
                 android:layout_marginEnd="16dp"
-                android:text="TextView" />
+                android:text="TextView"
+                tools:ignore="HardcodedText" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -256,7 +273,8 @@
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/priceTxt"
@@ -268,7 +286,8 @@
                     android:textColor="@color/darkBrown"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>

@@ -31,16 +31,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    app:srcCompat="@drawable/profile" />
+                    app:srcCompat="@drawable/profile"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:text="Tina Anderson"
+                    android:text="@string/tina_anderson"
                     android:textColor="@color/darkBrown"
                     android:textStyle="bold" />
 
@@ -50,7 +51,8 @@
                     android:layout_height="50dp"
                     android:background="@drawable/brown_full_corner_bg"
                     android:padding="12dp"
-                    app:srcCompat="@drawable/bell_icon" />
+                    app:srcCompat="@drawable/bell_icon"
+                    tools:ignore="ContentDescription" />
             </LinearLayout>
 
             <LinearLayout
@@ -72,7 +74,8 @@
                     android:ems="10"
                     android:hint="@string/search_anything"
                     android:inputType="text"
-                    android:padding="8dp" />
+                    android:padding="8dp"
+                    tools:ignore="Autofill,InefficientWeight,VisualLintTextFieldSize" />
 
                 <ImageView
                     android:id="@+id/imageView4"
@@ -80,7 +83,8 @@
                     android:layout_height="50dp"
                     android:background="@drawable/brown_full_corner_bg"
                     android:padding="12dp"
-                    app:srcCompat="@drawable/settings" />
+                    app:srcCompat="@drawable/settings"
+                    tools:ignore="ContentDescription" />
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -119,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Category"
+                android:text="@string/category"
                 android:textColor="@color/darkBrown"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -170,14 +174,15 @@
                     android:text="@string/popular_coffees"
                     android:textColor="@color/darkBrown"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="InefficientWeight" />
 
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:text="See all" />
+                    android:text="@string/see_all" />
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -223,20 +228,23 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical">
+                android:layout_gravity="center_vertical"
+                tools:ignore="DisableBaselineAlignment">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:id="@+id/imageView6"
                         android:layout_width="22dp"
                         android:layout_height="22dp"
                         android:layout_gravity="center"
-                        app:srcCompat="@drawable/btn_1" />
+                        app:srcCompat="@drawable/btn_1"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:id="@+id/textView5"
@@ -253,14 +261,16 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
 
                         android:layout_width="22dp"
                         android:layout_height="22dp"
                         android:layout_gravity="center"
-                        app:srcCompat="@drawable/btn_2" />
+                        app:srcCompat="@drawable/btn_2"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
 
@@ -276,21 +286,23 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
 
                         android:layout_width="22dp"
                         android:layout_height="22dp"
                         android:layout_gravity="center"
-                        app:srcCompat="@drawable/btn_3" />
+                        app:srcCompat="@drawable/btn_3"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
 
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="3dp"
-                        android:text="Wishlist"
+                        android:text="@string/wishlist"
                         android:textAlignment="center"
                         android:textColor="@color/darkBrown" />
                 </LinearLayout>
@@ -299,21 +311,23 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
 
                         android:layout_width="22dp"
                         android:layout_height="22dp"
                         android:layout_gravity="center"
-                        app:srcCompat="@drawable/btn_4" />
+                        app:srcCompat="@drawable/btn_4"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
 
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="3dp"
-                        android:text="My order"
+                        android:text="@string/my_order"
                         android:textAlignment="center"
                         android:textColor="@color/darkBrown" />
                 </LinearLayout>
@@ -322,14 +336,16 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                 <ImageView
 
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/btn_5" />
+                    app:srcCompat="@drawable/btn_5"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
 

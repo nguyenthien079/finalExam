@@ -9,4 +9,14 @@
     <string name="profile">Profile</string>
     <string name="enter_your_discount_code">Enter Your Discount Code</string>
     <string name="apply">Apply</string>
+    <string name="back">Back</string>
+    <string name="list">List</string>
+    <string name="tina_anderson">Tina Anderson</string>
+    <string name="category">Category</string>
+    <string name="see_all">See all</string>
+    <string name="my_order">My order</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="default_web_client_id">623263029703-19oin2hhp5bmassjd6svfb5s1su3ovm2.apps.googleusercontent.com</string>
+
+
 </resources>

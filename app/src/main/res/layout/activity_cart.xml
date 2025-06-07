@@ -32,14 +32,16 @@
 
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:id="@+id/imageView9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        app:srcCompat="@drawable/back" />
+                        app:srcCompat="@drawable/back"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:id="@+id/textView7"
@@ -47,7 +49,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:text="Back"
-                        android:textColor="@color/darkBrown" />
+                        android:textColor="@color/darkBrown"
+                        tools:ignore="HardcodedText" />
                 </LinearLayout>
 
                 <TextView
@@ -95,7 +98,8 @@
             android:ems="10"
             android:inputType="text"
             android:hint="@string/enter_your_discount_code"
-            android:background="#00000000"/>
+            android:background="#00000000"
+            tools:ignore="Autofill,RtlSymmetry,VisualLintTextFieldSize" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button2"
@@ -109,7 +113,8 @@
             android:text="@string/apply"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="VisualLintButtonSize" />
 
     </LinearLayout>
 
@@ -138,7 +143,8 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/textView18"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView18" />
+                app:layout_constraintTop_toTopOf="@+id/textView18"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView18"
@@ -149,7 +155,8 @@
                 android:textColor="@color/darkBrown"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view2" />
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView16"
@@ -160,7 +167,8 @@
                 android:textColor="@color/darkBrown"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+                app:layout_constraintTop_toBottomOf="@+id/textView15"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView15"
@@ -171,7 +179,8 @@
                 android:textColor="@color/darkBrown"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                app:layout_constraintTop_toBottomOf="@+id/textView10"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/totalTaxTxt"
@@ -182,7 +191,8 @@
                 android:textColor="@color/darkBrown"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/deliveryTxt" />
+                app:layout_constraintTop_toBottomOf="@+id/deliveryTxt"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/deliveryTxt"
@@ -193,7 +203,8 @@
                 android:textColor="@color/darkBrown"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                app:layout_constraintTop_toBottomOf="@+id/textView10"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/totalFeeTxt"
@@ -203,7 +214,8 @@
                 android:textColor="@color/darkBrown"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -213,7 +225,8 @@
                 android:textColor="@color/darkBrown"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
 
             <View
                 android:id="@+id/view2"
@@ -237,6 +250,7 @@
             android:text="Procced to Checkout"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,VisualLintButtonSize" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
