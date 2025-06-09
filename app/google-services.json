@@ -13,15 +13,33 @@
           "package_name": "com.example.finalexam"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "778824999877-dtc1ieqm4jqudkj928cvn8t2v4um68sg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.finalexam",
+            "certificate_hash": "b4ab922ee8d703dc365bfd6668766a4f95a50a29"
+          }
+        },
+        {
+          "client_id": "778824999877-hs2j86far5pk6ni7n2jev98ss63kvau4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-        
+          "current_key": "AIzaSyCw_VtmbXvBJqtMBs6_uC9h_wlpQjUdQwg"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778824999877-hs2j86far5pk6ni7n2jev98ss63kvau4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

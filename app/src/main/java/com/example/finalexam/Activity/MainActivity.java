@@ -36,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, CartActivity.class);
             startActivity(intent);
         });
+        binding.profileBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, UserProfileActivity.class);
+            startActivity(intent);
+        });
+
     }
 
     private void initPopular() {

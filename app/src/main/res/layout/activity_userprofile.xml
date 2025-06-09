@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Profile Picture -->
+        <ImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile"
+            android:background="@drawable/profile_image_border"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Profile picture"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Display Name -->
+        <TextView
+            android:id="@+id/displayNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Display Name"
+            android:textColor="@color/darkBrown"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Rating -->
+        <TextView
+            android:id="@+id/ratingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating: 4.5"
+            android:textColor="@color/grey"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Bio -->
+        <EditText
+            android:id="@+id/bioEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Bio"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/lightGrey"
+            android:minHeight="80dp"
+            android:gravity="top"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Contact Info -->
+        <EditText
+            android:id="@+id/contactEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contact Info"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/lightGrey"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Update Profile Button -->
+        <Button
+            android:id="@+id/updateProfileButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Profile"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Deactivate Account Button -->
+        <Button
+            android:id="@+id/deactivateAccountButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deactivate Account"
+            android:backgroundTint="@color/lightGrey"
+            android:textColor="@color/brown"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Delete Account Button -->
+        <Button
+            android:id="@+id/deleteAccountButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete Account Permanently"
+            android:backgroundTint="#660000"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</ScrollView>

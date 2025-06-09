@@ -5,6 +5,7 @@ import android.content.IntentSender;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.android.gms.auth.api.identity.BeginSignInRequest;
 import com.google.android.gms.auth.api.identity.Identity;
 import com.google.android.gms.auth.api.identity.SignInClient;
@@ -132,6 +133,7 @@ public class LoginActivity extends AppCompatActivity {
                 });
     }
 
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -142,18 +144,49 @@ public class LoginActivity extends AppCompatActivity {
                 if (idToken != null) {
                     AuthCredential firebaseCredential = GoogleAuthProvider.getCredential(idToken, null);
                     auth.signInWithCredential(firebaseCredential)
-                            .addOnCompleteListener(this, task -> {
+                            .addOnCompleteListener(task -> {
                                 if (task.isSuccessful()) {
-                                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                                    finish();
+                                    FirebaseUser user = auth.getCurrentUser();
+                                    if (user == null) {
+                                        Toast.makeText(this, "User not found after sign-in", Toast.LENGTH_SHORT).show();
+                                        return;
+                                    }
+                                    String email = user.getEmail();
+
+                                    // **Truy vấn đúng node "Users"**
+                                    FirebaseDatabase.getInstance().getReference("Users")
+                                            .orderByChild("email").equalTo(email)
+                                            .get()
+                                            .addOnCompleteListener(dbTask -> {
+                                                if (!dbTask.isSuccessful()) {
+                                                    Exception e = dbTask.getException();
+                                                    Log.e("Firebase", "DB check failed", e);
+                                                    Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                                                } else {
+                                                    if (dbTask.getResult().exists()) {
+                                                        // Email tồn tại -> cho đăng nhập
+                                                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                                        finish();
+                                                    } else {
+                                                        // Email chưa đăng ký
+                                                        Toast.makeText(this, "Email not registered. Please register first.", Toast.LENGTH_LONG).show();
+                                                        auth.signOut();
+                                                        Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                                                        intent.putExtra("email", email);
+                                                        startActivity(intent);
+                                                    }
+                                                }
+                                            });
                                 } else {
                                     Toast.makeText(this, "Firebase Auth failed", Toast.LENGTH_SHORT).show();
                                 }
                             });
                 }
             } catch (Exception e) {
-                Toast.makeText(this, "Google Sign-in Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Google Sign-in Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         }
     }
+
+
 }

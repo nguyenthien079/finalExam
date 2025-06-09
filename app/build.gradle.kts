@@ -46,6 +46,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation (libs.okhttp3.okhttp)
+
 
     implementation(libs.glide)
     implementation (libs.firebase.auth)
