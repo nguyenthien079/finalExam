@@ -48,6 +48,7 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation (libs.okhttp3.okhttp)
 
+    implementation (libs.android.job)
 
     implementation(libs.glide)
     implementation (libs.firebase.auth)

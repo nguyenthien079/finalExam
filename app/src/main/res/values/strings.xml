@@ -16,6 +16,7 @@
     <string name="see_all">See all</string>
     <string name="my_order">My order</string>
     <string name="wishlist">Wishlist</string>
+    <string name="rating_format">Rating: %1$.1f</string>
     <string name="default_web_client_id">778824999877-hs2j86far5pk6ni7n2jev98ss63kvau4.apps.googleusercontent.com</string>
 
 
