@@ -52,6 +52,7 @@ dependencies {
     implementation(libs.glide)
     implementation (libs.firebase.auth)
     implementation (libs.play.services.auth)
+    implementation (libs.cloudinary.cloudinary.android)
 
     implementation(libs.gson)
 }
