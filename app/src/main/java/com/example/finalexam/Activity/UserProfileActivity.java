@@ -21,6 +21,7 @@ import com.cloudinary.android.MediaManager;
 import com.cloudinary.android.callback.ErrorInfo;
 import com.cloudinary.android.callback.UploadCallback;
 import com.example.finalexam.Domain.UserModel;
+import com.example.finalexam.Helper.CurrentUser;
 import com.example.finalexam.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -105,7 +106,7 @@ public class UserProfileActivity extends AppCompatActivity {
         userRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                UserModel user = snapshot.getValue(UserModel.class);
+                UserModel user = CurrentUser.getUser();
                 if (user != null) {
                     displayNameTextView.setText(user.getUsername());
                     ratingTextView.setText(getString(R.string.rating_format, user.getRating()));

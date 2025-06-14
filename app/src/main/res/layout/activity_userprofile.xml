@@ -140,5 +140,60 @@
             android:text="Wanna see another user?"
             android:textColor="@color/orange"
             android:layout_marginTop="16dp" />
+        <!-- Transaction Summary -->
+        <TextView
+            android:id="@+id/transactionSummaryLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transaction Summary"
+            android:textColor="@color/darkBrown"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:id="@+id/totalTransactionsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Transactions: 12"
+            android:textColor="@color/grey"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Purchase History -->
+        <TextView
+            android:id="@+id/purchaseHistoryLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Purchase History"
+            android:textColor="@color/darkBrown"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <ListView
+            android:id="@+id/purchaseHistoryListView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/white"
+            android:layout_marginBottom="12dp" />
+
+        <!-- User Reviews -->
+        <TextView
+            android:id="@+id/userReviewsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Reviews"
+            android:textColor="@color/darkBrown"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <ListView
+            android:id="@+id/userReviewsListView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/white"
+            android:layout_marginBottom="24dp" />
+
     </LinearLayout>
 </ScrollView>

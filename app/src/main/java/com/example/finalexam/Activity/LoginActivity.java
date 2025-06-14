@@ -6,20 +6,21 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.finalexam.Domain.UserModel;
+import com.example.finalexam.Helper.CurrentUser;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.android.gms.auth.api.identity.BeginSignInRequest;
 import com.google.android.gms.auth.api.identity.Identity;
 import com.google.android.gms.auth.api.identity.SignInClient;
 import com.google.android.gms.auth.api.identity.SignInCredential;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.gms.common.SignInButton;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
@@ -79,9 +80,17 @@ public class LoginActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             FirebaseUser user = auth.getCurrentUser();
                             if (user != null && user.isEmailVerified()) {
-                                startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                                finish();
-                            } else {
+                                String uid = user.getUid();
+                                FirebaseDatabase.getInstance().getReference("Users").child(uid).get()
+                                        .addOnSuccessListener(snapshot -> {
+                                            if (snapshot.exists()) {
+                                                UserModel userModel = snapshot.getValue(UserModel.class);
+                                                CurrentUser.setUser(userModel); // Gán vào singleton
+                                                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                                finish();
+                                            }
+                                        });
+                            }else {
                                 Toast.makeText(this, "Please verify your email", Toast.LENGTH_SHORT).show();
                                 auth.signOut();
                             }
@@ -165,6 +174,13 @@ public class LoginActivity extends AppCompatActivity {
                                                 } else {
                                                     if (dbTask.getResult().exists()) {
                                                         // Email tồn tại -> cho đăng nhập
+                                                        for (DataSnapshot snapshot : dbTask.getResult().getChildren()) {
+                                                            UserModel userModel = snapshot.getValue(UserModel.class);
+                                                            if (userModel != null) {
+                                                                com.example.finalexam.Helper.CurrentUser.setUser(userModel);
+                                                                break;
+                                                            }
+                                                        }
                                                         startActivity(new Intent(LoginActivity.this, MainActivity.class));
                                                         finish();
                                                     } else {
